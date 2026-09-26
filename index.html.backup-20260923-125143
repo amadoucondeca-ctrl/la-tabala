@@ -1,0 +1,792 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA TABALA — Solidarité – Développement</title>
+    <meta name="description" content="ONG LA TABALA - Solidarité – Développement - Ensemble pour une Guinée citoyenne">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+<style id="logo-la-tabala-style">
+.logo-la-tabala {
+    display: block;
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    object-position: center;
+    border: 0;
+    background: transparent;
+}
+
+.logo-insertion-la-tabala {
+    position: absolute;
+    top: 18px;
+    left: 25px;
+    z-index: 100;
+}
+
+@media (max-width: 900px) {
+    .logo-la-tabala {
+        width: 65px;
+        height: 65px;
+    }
+
+    .logo-insertion-la-tabala {
+        top: 10px;
+        left: 15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     BARRE SUPERIEURE
+========================================================= -->
+<div class="topbar">
+    <div class="container topbar-inner">
+        <div class="top-contact">
+            <span>✉</span>
+            <span>tabalaconakry2011@gmail.com</span>
+            <span class="top-separator"></span>
+            <span>☎</span>
+            <span>TEL : (00224) 622 17 27 87 / 624 35 35 59</span>
+        </div>
+
+        <div class="top-slogan">
+            EGALITE – SOLIDARITE – DEVELOPPEMENT
+        </div>
+    </div>
+</div>
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+<header class="header">
+    <div class="container header-inner">
+
+        <a href="#accueil" class="brand">
+            <div class="logo-box">
+                <img src="images/logo-la-tabala.png" alt="Logo officiel de LA TABALA" class="logo-la-tabala">
+                <span class="logo-fallback">LA<br>TABALA</span>
+            </div>
+
+            <div class="brand-text">
+                <strong>LA TABALA</strong>
+                <span>Solidarité – Développement</span>
+                <small>Ensemble pour une Guinée citoyenne</small>
+            </div>
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+            <a class="active" href="#accueil">Accueil</a>
+            <a href="#ong">L'ONG <span>⌄</span></a>
+            <a href="#actions">Nos actions <span>⌄</span></a>
+            <a href="#pionniers">Nos pionniers</a>
+            <a href="#projets">Projets</a>
+            <a href="#actualites">Actualités</a>
+            <a href="#publications">Publications</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+            <button class="search-btn" aria-label="Rechercher">⌕</button>
+            <a class="contact-button" href="#contact">Nous contacter</a>
+            <button class="mobile-menu" id="mobileMenu" aria-label="Menu">☰</button>
+        </div>
+
+    </div>
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<main>
+
+<section id="accueil" class="hero">
+
+    <div class="hero-photo"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <div class="hero-copy">
+
+            <div class="hero-label">SANTÉ POUR TOUS</div>
+
+            <h1>
+                Ensemble pour une<br>
+                <span>Guinée plus saine</span>
+            </h1>
+
+            <p>
+                L'ONG LA TABALA collecte des données de santé,
+                évalue les personnes, les cadres et les structures
+                de santé et valorise les meilleurs acteurs.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#actions" class="primary-button">
+                    Découvrir nos actions <b>→</b>
+                </a>
+
+                <a href="#video" class="video-link">
+                    <span class="play-circle">▶</span>
+                    <span>Voir la vidéo</span>
+                </a>
+            </div>
+
+        </div>
+
+
+        <!-- BLOC SANTE A DROITE -->
+        <div class="hero-health">
+
+            <div class="health-item">
+                <div class="health-icon heart-icon">♡</div>
+                <div>
+                    <strong>Prévention</strong>
+                    <span>Dépistage<br>Prise en charge</span>
+                </div>
+            </div>
+
+            <div class="health-line"></div>
+
+            <div class="health-item">
+                <div class="health-icon bars-icon">▥</div>
+                <div>
+                    <strong>Évaluation</strong>
+                    <span>Des structures<br>de santé</span>
+                </div>
+            </div>
+
+            <div class="health-line"></div>
+
+            <div class="health-item">
+                <div class="health-icon trophy-icon">♜</div>
+                <div>
+                    <strong>Valorisation</strong>
+                    <span>Des meilleurs<br>acteurs</span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- STATISTIQUES -->
+    <div class="hero-stats container">
+
+        <div class="stat">
+            <div class="stat-icon">▣</div>
+            <div>
+                <strong>2011</strong>
+                <span>Année de création</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">♟</div>
+            <div>
+                <strong>123+</strong>
+                <span>Membres actifs</span>
+            </div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-icon">♟</div>
+            <div>
+                <strong>350+</strong>
+                <span>Membres dans d'autres communautés</span>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     DOMAINES D'INTERVENTION
+========================================================= -->
+<section id="actions" class="domains section">
+
+    <div class="container">
+
+        <div class="domain-layout">
+
+            <div class="domain-intro">
+
+                <div class="eyebrow">NOS DOMAINES D'INTERVENTION</div>
+
+                <h2>
+                    Des actions concrètes<br>
+                    pour un développement durable
+                </h2>
+
+                <p>
+                    LA TABALA intervient dans plusieurs secteurs clés
+                    pour améliorer les conditions de vie des communautés.
+                </p>
+
+                <a href="#contact" class="small-button">
+                    En savoir plus <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="domain-cards">
+
+                <article class="domain-card health-card">
+                    <div class="domain-circle">♡</div>
+                    <h3>Santé et bien-être</h3>
+                    <p>Prévention, dépistage,<br>prise en charge.</p>
+                </article>
+
+                <article class="domain-card environment-card">
+                    <div class="domain-circle">⌁</div>
+                    <h3>Environnement</h3>
+                    <p>Protection de l'environnement<br>et développement agricole.</p>
+                </article>
+
+                <article class="domain-card education-card">
+                    <div class="domain-circle">▣</div>
+                    <h3>Éducation</h3>
+                    <p>Formation, information,<br>sensibilisation,<br>alphabétisation.</p>
+                </article>
+
+                <article class="domain-card social-card">
+                    <div class="domain-circle">♟</div>
+                    <h3>Protection sociale</h3>
+                    <p>Soutien aux communautés<br>vulnérables.</p>
+                </article>
+
+                <article class="domain-card justice-card">
+                    <div class="domain-circle">⚖</div>
+                    <h3>Justice</h3>
+                    <p>Citoyenneté, vulgarisation<br>des lois, paix sociale.</p>
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MISSION / VISION
+========================================================= -->
+<section id="ong" class="mission-section">
+
+    <div class="container mission-box">
+
+        <div class="mission-image">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1000&q=85"
+                 alt="Action communautaire de santé">
+        </div>
+
+        <div class="mission-content">
+
+            <div class="mission-column">
+
+                <div class="section-symbol">◎</div>
+
+                <div>
+                    <h2>Notre mission</h2>
+
+                    <p>
+                        Promouvoir la santé, améliorer les conditions de vie des
+                        communautés, renforcer la gouvernance locale, protéger
+                        l'environnement, promouvoir l'éducation, la citoyenneté,
+                        l'égalité et la solidarité.
+                    </p>
+
+                    <a href="#contact" class="small-button">
+                        En savoir plus <span>→</span>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="mission-divider"></div>
+
+            <div class="mission-column vision-column">
+
+                <div class="section-symbol">●</div>
+
+                <div>
+                    <h2>Notre vision</h2>
+
+                    <p>
+                        Devenir l'une des plateformes des organisations de la
+                        société civile guinéenne de jeunes citoyens actifs
+                        dans la communauté.
+                    </p>
+
+                    <div class="quote-box">
+                        <span>“</span>
+                        <strong>
+                            « EGALITE – SOLIDARITE –<br>
+                            DEVELOPPEMENT »
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PIONNIERS / PROJETS
+========================================================= -->
+<section id="pionniers" class="content-section">
+
+    <div class="container two-column">
+
+        <div class="large-column">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Nos pionniers</h2>
+                    <p>Des acteurs de terrain au service de la santé</p>
+                </div>
+
+                <a href="#contact">Voir tous →</a>
+            </div>
+
+            <div class="pioneer-grid">
+
+                <article class="pioneer-card">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=700&q=85" alt="Médecin">
+                    <div class="card-body">
+                        <span class="tag">Médecin</span>
+                        <h3>Acteur de santé</h3>
+                        <p>Médecine générale – Guinée</p>
+                    </div>
+                </article>
+
+                <article class="pioneer-card">
+                    <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=700&q=85" alt="Infirmier">
+                    <div class="card-body">
+                        <span class="tag">Infirmier</span>
+                        <h3>Professionnel de santé</h3>
+                        <p>Soins et accompagnement</p>
+                    </div>
+                </article>
+
+                <article class="pioneer-card">
+                    <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=700&q=85" alt="Cadre de santé">
+                    <div class="card-body">
+                        <span class="tag">Cadre de santé</span>
+                        <h3>Responsable santé</h3>
+                        <p>Direction et coordination</p>
+                    </div>
+                </article>
+
+                <article class="pioneer-card">
+                    <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=700&q=85" alt="Responsable sanitaire">
+                    <div class="card-body">
+                        <span class="tag">Structure</span>
+                        <h3>Responsable sanitaire</h3>
+                        <p>Gestion et qualité</p>
+                    </div>
+                </article>
+
+            </div>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+            </div>
+
+        </div>
+
+
+        <!-- PROJETS -->
+        <aside id="projets" class="side-panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Nos projets prioritaires</h2>
+                    <p>Des initiatives au service des communautés</p>
+                </div>
+
+                <a href="#contact">Voir tous les projets →</a>
+            </div>
+
+            <div class="project-list">
+
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=700&q=85" alt="Projet santé">
+                    <span class="tag">SANTÉ</span>
+                    <h3>Campagne de dépistage</h3>
+                    <p>Prévention et sensibilisation communautaire.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1592150621744-aca64f48394a?auto=format&fit=crop&w=700&q=85" alt="Projet environnement">
+                    <span class="tag">ENVIRONNEMENT</span>
+                    <h3>Reboisement et agriculture</h3>
+                    <p>Protection des ressources naturelles.</p>
+                </article>
+
+                <article class="project-card">
+                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=85" alt="Projet éducation">
+                    <span class="tag">ÉDUCATION</span>
+                    <h3>Appui à la scolarisation</h3>
+                    <p>Mobilisation et accompagnement des jeunes.</p>
+                </article>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ACTUALITES + PARTENAIRES
+========================================================= -->
+<section id="actualites" class="content-section news-section">
+
+    <div class="container two-column">
+
+        <div class="large-column">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Actualités</h2>
+                    <p>Les dernières nouvelles de LA TABALA</p>
+                </div>
+
+                <a href="#contact">Voir toutes les actualités →</a>
+            </div>
+
+            <div class="news-grid">
+
+                <article class="news-card">
+                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=800&q=85" alt="Campagne de dépistage">
+                    <div class="news-body">
+                        <span class="date">12 MARS 2025</span>
+                        <h3>Campagne de dépistage et sensibilisation</h3>
+                        <p>Une grande mobilisation pour la santé des communautés.</p>
+                        <a href="#">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=85" alt="Formation des jeunes">
+                    <div class="news-body">
+                        <span class="date">06 MARS 2025</span>
+                        <h3>Formation des jeunes leaders</h3>
+                        <p>Renforcement des capacités et engagement citoyen.</p>
+                        <a href="#">Lire la suite →</a>
+                    </div>
+                </article>
+
+                <article class="news-card">
+                    <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=85" alt="Reboisement">
+                    <div class="news-body">
+                        <span class="date">28 FÉVRIER 2025</span>
+                        <h3>Reboisement et agriculture durable</h3>
+                        <p>Une action en faveur d'un environnement plus vert.</p>
+                        <a href="#">Lire la suite →</a>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+
+        <!-- PARTENAIRES -->
+        <aside class="side-panel partners-panel">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Nos partenaires</h2>
+                    <p>Des collaborations au service du développement</p>
+                </div>
+
+                <a href="#contact">Voir tous →</a>
+            </div>
+
+            <div class="partner-grid">
+
+                <div class="partner">
+                    <div class="partner-logo logo-jmic">ONG-JMIC</div>
+                </div>
+
+                <div class="partner">
+                    <div class="partner-logo logo-conapros">CONAPROS</div>
+                </div>
+
+                <div class="partner">
+                    <div class="partner-logo logo-federation">
+                        Fédération des<br>
+                        Associations<br>
+                        cliniques
+                    </div>
+                </div>
+
+                <div class="partner">
+                    <div class="partner-logo logo-reffecig">LA REFFECIG</div>
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     VIDEO
+========================================================= -->
+<section id="galerie" class="video-section">
+
+    <div class="container">
+
+        <div class="video-title">
+            <span>À DÉCOUVRIR</span>
+            <h2>Découvrez LA TABALA en images</h2>
+            <p>
+                Notre vidéo institutionnelle présentera nos équipes,
+                nos actions, nos communautés et nos engagements.
+            </p>
+        </div>
+
+        <div id="video" class="video-cover">
+
+            <div class="video-background"></div>
+            <div class="video-overlay"></div>
+
+            <button class="big-play" id="videoButton">▶</button>
+
+            <div class="video-label">
+                Vidéo institutionnelle à intégrer
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     BANDEAU SANTE
+========================================================= -->
+<section class="health-cta">
+
+    <div class="health-cta-background"></div>
+
+    <div class="container health-cta-content">
+
+        <div class="cta-symbol">♡</div>
+
+        <div>
+            <h2>La santé, un droit pour tous</h2>
+            <p>
+                Soutenez nos actions pour une meilleure prévention,
+                une prise en charge efficace et un accès équitable aux soins.
+            </p>
+        </div>
+
+        <a href="#contact" class="cta-button">
+            Soutenir nos actions <span>→</span>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+<section id="contact" class="contact-section">
+
+    <div class="container">
+
+        <div class="contact-intro">
+            <span>NOUS CONTACTER</span>
+            <h2>Construisons ensemble une Guinée citoyenne</h2>
+            <p>
+                Pour toute information, partenariat ou collaboration,
+                notre équipe reste à votre disposition.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-item">
+                <div class="contact-icon">✉</div>
+                <div>
+                    <h3>Email</h3>
+                    <p>tabalaconakry2011@gmail.com</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">☎</div>
+                <div>
+                    <h3>Téléphone</h3>
+                    <p>(00224) 622 17 27 87<br>624 35 35 59</p>
+                </div>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">●</div>
+                <div>
+                    <h3>Siège</h3>
+                    <p>Yimbaya Tannérie<br>Commune de Matoto – Conakry</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     PUBLICATIONS
+========================================================= -->
+<section id="publications" class="hidden-anchor"></section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="footer">
+
+    <div class="container footer-main">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                <img src="images/logo-la-tabala.png" alt="Logo officiel de LA TABALA" class="logo-la-tabala">
+            </div>
+
+            <div>
+                <strong>LA TABALA</strong>
+                <span>Solidarité – Développement</span>
+                <small>Ensemble pour une Guinée citoyenne</small>
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Navigation</h3>
+            <a href="#accueil">Accueil</a>
+            <a href="#ong">L'ONG</a>
+            <a href="#actions">Nos actions</a>
+            <a href="#pionniers">Nos pionniers</a>
+            <a href="#projets">Projets</a>
+        </div>
+
+
+        <div class="footer-column">
+            <h3>Informations</h3>
+            <a href="#actualites">Actualités</a>
+            <a href="#publications">Publications</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+
+        <div class="footer-column social-column">
+            <h3>Suivez-nous</h3>
+
+            <div class="socials">
+                <a href="#">f</a>
+                <a href="#">▶</a>
+                <a href="#">𝕏</a>
+                <a href="#">in</a>
+            </div>
+        </div>
+
+
+        <div class="footer-column footer-contact">
+            <h3>Contact</h3>
+
+            <p>✉ &nbsp; tabalaconakry2011@gmail.com</p>
+            <p>☎ &nbsp; TEL : (00224) 622 17 27 87 / 624 35 35 59</p>
+            <p>● &nbsp; Yimbaya Tannérie, Secteur 4<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Commune de Matoto – Conakry</p>
+        </div>
+
+        <div class="guinea-shape">
+            🇬🇳
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="container footer-bottom-inner">
+
+            <span>© 2026 LA TABALA – Tous droits réservés</span>
+
+            <div>
+                <a href="#">Mentions légales</a>
+                <span>|</span>
+                <a href="#">Politique de confidentialité</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     MODAL VIDEO
+========================================================= -->
+<div class="video-modal" id="videoModal">
+
+    <div class="video-modal-content">
+
+        <button class="close-video" id="closeVideo">×</button>
+
+        <div class="video-placeholder">
+            <div class="big-play">▶</div>
+            <h3>Vidéo institutionnelle LA TABALA</h3>
+            <p>La vidéo officielle sera intégrée ici.</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
