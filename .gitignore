@@ -1,0 +1,11 @@
+﻿# Sauvegardes locales — ne pas publier
+*-AVANT-*.html
+*-AVANT-*.css
+*-AVANT-*.js
+
+# Captures d'écran locales
+Capture/
+
+# Fichiers temporaires de travail
+*.tmp
+

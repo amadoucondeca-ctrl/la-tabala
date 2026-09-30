@@ -81,46 +81,139 @@
 });
 
 /* =========================================================
-   DEFILEMENT AUTOMATIQUE - NOS ICÔNES
+   NOS ICÔNES — CARROUSEL 5 PHOTOS / 4 CARTES
 ========================================================= */
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
-    const pioneerGrid = document.querySelector(".pioneer-grid");
-
-    if(!pioneerGrid) return;
-
-    let position = 0;
-    let lastTime = null;
-    const speed = 35;
-
-    function animatePioneers(timestamp){
-
-        if(lastTime === null){
-            lastTime = timestamp;
+    const icones = [
+        {
+            file: "icone/ABD.png",
+            name: "Abdoulaye Bobo Diallo",
+            function: "Chirurgien urologue",
+            prize: "Le Grand Prix de l’ONG LA TABALA 2023"
+        },
+        {
+            file: "icone/AK.png",
+            name: "Dr. Kaba Abdoulaye",
+            function: "Président de l’ONG LA TABALA",
+            prize: "Président de l’ONG LA TABALA"
+        },
+        {
+            file: "icone/FFM.png",
+            name: "Lieutenant-Colonel Fofana Fodé Momo",
+            function: "Biologiste",
+            prize: "Distinction de l’ONG LA TABALA"
+        },
+        {
+            file: "icone/HB.png",
+            name: "Dr Houdy Bah",
+            function: "Professionnelle de santé",
+            prize: "Honorée par LA TABALA — message aux Guinéens en Pular"
+        },
+        {
+            file: "icone/MFD.png",
+            name: "Lieutenant-Colonel Fodé Momo",
+            function: "Biologiste",
+            prize: "Le Grand Prix de l’ONG LA TABALA 2023 — 8ᵉ édition"
+        },
+        {
+            file: "icone/DR Moussa DIOUBATE.jpeg",
+            name: "Dr Moussa DIOUBATE",
+            function: "Spécialiste en médecine sociale et management de la Santé",
+            prize: "Icône de l’ONG LA TABALA"
         }
+    ];
 
-        const elapsed = timestamp - lastTime;
-        lastTime = timestamp;
+    const cards = [0, 1, 2, 3].map(function (i) {
+        return {
+            image: document.getElementById("iconeImage" + i),
+            name: document.getElementById("iconeName" + i),
+            tag: document.getElementById("iconeTag" + i),
+            prize: document.getElementById("iconePrize" + i)
+        };
+    });
 
-        position += speed * elapsed / 1000;
+    const dots = document.querySelectorAll("#iconeDots .dot");
 
-        const firstCard = pioneerGrid.querySelector(".pioneer-card");
-
-        if(firstCard){
-            const cardWidth = firstCard.offsetWidth + 12;
-
-            if(position >= cardWidth){
-                pioneerGrid.appendChild(firstCard);
-                position -= cardWidth;
-            }
-
-            pioneerGrid.scrollLeft = position;
-        }
-
-        requestAnimationFrame(animatePioneers);
+    if (cards.some(function (card) {
+        return !card.image || !card.name || !card.tag || !card.prize;
+    })) {
+        return;
     }
 
-    requestAnimationFrame(animatePioneers);
+    let currentIndex = 0;
+
+    function afficherIcone(card, data) {
+        card.image.src = data.file;
+        card.image.alt = data.name;
+        card.name.textContent = data.name;
+        card.tag.textContent = data.function;
+        card.prize.textContent = data.prize;
+    }
+
+    function afficherPaire() {
+
+        cards.forEach(function (card, position) {
+
+            const index = (currentIndex + position) % icones.length;
+
+            afficherIcone(
+                card,
+                icones[index]
+            );
+        });
+
+        dots.forEach(function (dot, index) {
+            dot.classList.toggle(
+                "active",
+                index === currentIndex
+            );
+        });
+    }
+
+    /* Précharger les 5 images avant le premier affichage */
+    const prechargement = icones.map(function (icone) {
+        return new Promise(function (resolve) {
+            const image = new Image();
+
+            image.onload = resolve;
+            image.onerror = resolve;
+            image.src = icone.file;
+        });
+    });
+
+    Promise.all(prechargement).then(function () {
+
+        afficherPaire();
+
+        setInterval(function () {
+
+            currentIndex =
+                (currentIndex + 1) % icones.length;
+
+            afficherPaire();
+
+        }, 4500);
+
+    });
+
+    dots.forEach(function (dot) {
+
+        dot.addEventListener("click", function () {
+
+            const index = parseInt(
+                dot.getAttribute("data-icone-slide"),
+                10
+            );
+
+            if (isNaN(index)) return;
+
+            currentIndex = index;
+            afficherPaire();
+
+        });
+
+    });
 
 });
 
@@ -164,7 +257,14 @@ document.addEventListener("DOMContentLoaded", function(){
         requestAnimationFrame(animateProjects);
     }
 
-    requestAnimationFrame(animateProjects);
+    /* Attendre le chargement complet avant de mesurer les cartes */
+    window.addEventListener("load", function () {
+
+        requestAnimationFrame(function () {
+            requestAnimationFrame(animateProjects);
+        });
+
+    });
 
 });
 
@@ -525,6 +625,254 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 });
+
+
+
+
+
+
+/* =========================================================
+   LA TABALA - CARROUSEL VIDEO "DECOUVREZ NOS ACTIVITES"
+   ========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const video = document.querySelector("#video video");
+
+    if (!video) {
+        console.warn("Lecteur vidéo #video introuvable.");
+        return;
+    }
+
+    const videoList = [
+        {
+            src: "video/Abdoulaye KABA president de L'ONG tabala parle de sa satisfaction de deroulement du forum.mp4",
+            title: "Satisfaction du Président de l’ONG LA TABALA après le forum"
+        },
+        {
+            src: "video/allocution de president de AN.mp4",
+            title: "Allocution du Président de l’Assemblée Nationale"
+        },
+        {
+            src: "video/Cérémonie des icones.mp4",
+            title: "Cérémonie des icônes de l’ONG LA TABALA"
+        },
+        {
+            src: "video/Dr HOUDY BAH HONORÉ PAR LA TABALA _ SON MESSAGE AUX GUINÉENS, EN PULAR 🎙️.mp4",
+            title: "Dr Houdy Bah honoré par l’ONG LA TABALA"
+        },
+        {
+            src: "video/l'un des meilleur praticiens hospitaliers du pays distincqués par L'ONG tabala 2023..mp4",
+            title: "Distinction d’un des meilleurs praticiens hospitaliers du pays"
+        },
+        {
+            src: "video/LE Grand prix de L'ONG tabala 2023,ABDOULAYE BOBO DIALLO professor à l'Universite gamal Abdel Nasser.mp4",
+            title: "Grand Prix de l’ONG LA TABALA 2023"
+        },
+        {
+            src: "video/presentation_tabala.mp4",
+            title: "Présentation de l’ONG LA TABALA"
+        },
+        {
+            src: "video/Prix du meilleur médecin en Guinée (organisé par L'ONG TABALA).mp4",
+            title: "Prix du meilleur médecin en Guinée"
+        },
+        {
+            src: "video/DR DIABATE video.mp4",
+            title: "Dr Diabaté — ONG LA TABALA"
+        }
+    ];
+
+    let currentIndex = 0;
+    let changingVideo = false;
+
+    /* Encodage correct des noms de fichiers */
+    function getVideoUrl(src) {
+        return src.split("/").map(function (part) {
+            return encodeURIComponent(part);
+        }).join("/");
+    }
+
+    /* Création de la zone titre */
+    let carouselTitle = document.querySelector("#video .video-carousel-title");
+
+    if (!carouselTitle) {
+        carouselTitle = document.createElement("div");
+        carouselTitle.className = "video-carousel-title";
+        video.parentElement.insertBefore(carouselTitle, video);
+    }
+
+    /* Création des boutons */
+    let controls = document.querySelector("#video .video-carousel-controls");
+
+    if (!controls) {
+        controls = document.createElement("div");
+        controls.className = "video-carousel-controls";
+
+        controls.innerHTML = `
+            <button type="button" class="video-carousel-btn video-prev" aria-label="Vidéo précédente">
+                ←
+            </button>
+
+            <span class="video-carousel-counter"></span>
+
+            <button type="button" class="video-carousel-btn video-next" aria-label="Vidéo suivante">
+                →
+            </button>
+        `;
+
+        video.parentElement.appendChild(controls);
+    }
+
+    const previousButton = controls.querySelector(".video-prev");
+    const nextButton = controls.querySelector(".video-next");
+    const counter = controls.querySelector(".video-carousel-counter");
+
+    function updateVideo(index, autoPlay = true) {
+
+        if (changingVideo) return;
+
+        changingVideo = true;
+        currentIndex = (index + videoList.length) % videoList.length;
+
+        const item = videoList[currentIndex];
+
+        carouselTitle.textContent = item.title;
+        counter.textContent = (currentIndex + 1) + " / " + videoList.length;
+
+        video.pause();
+        video.src = getVideoUrl(item.src);
+        video.load();
+
+        if (autoPlay) {
+            video.play().catch(function () {
+                /* Le navigateur peut bloquer l'autoplay */
+            });
+        }
+
+        setTimeout(function () {
+            changingVideo = false;
+        }, 250);
+    }
+
+    previousButton.addEventListener("click", function () {
+        updateVideo(currentIndex - 1);
+    });
+
+    nextButton.addEventListener("click", function () {
+        updateVideo(currentIndex + 1);
+    });
+
+    /* Passage automatique à la vidéo suivante */
+    video.addEventListener("ended", function () {
+        updateVideo(currentIndex + 1);
+    });
+
+    /* Démarrage */
+    video.controls = true;
+    video.muted = true;
+    video.playsInline = true;
+
+    updateVideo(0, true);
+
+    /* =====================================================
+       LIEN AVEC LES CARTES "NOS ICÔNES"
+       Les 4 premières cartes correspondent aux vidéos
+       3, 4, 5 et 8.
+       ===================================================== */
+
+    const iconCards = document.querySelectorAll("#icones .pioneer-card");
+
+    const iconVideoMap = [2, 3, 4, 7];
+
+    iconCards.forEach(function (card, index) {
+
+        card.style.cursor = "pointer";
+
+        card.addEventListener("click", function () {
+
+            if (typeof iconVideoMap[index] !== "number") return;
+
+            updateVideo(iconVideoMap[index]);
+
+            const videoSection = document.querySelector("#video");
+
+            if (videoSection) {
+                videoSection.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center"
+                });
+            }
+        });
+    });
+
+});
+
+
+
+/* ===== TRAITEMENT ISOLE VIDEO 2 - FORMAT PORTRAIT ===== */
+(function () {
+    const video = document.getElementById("tabalaVideo");
+    const cover = document.getElementById("video");
+
+    if (!video || !cover) return;
+
+    const VIDEO2 = "allocution de president de AN.mp4";
+
+    function isVideo2() {
+        const source = video.currentSrc || video.src || "";
+        let decoded = source;
+
+        try {
+            decoded = decodeURIComponent(source);
+        } catch (e) {}
+
+        return decoded.indexOf(VIDEO2) !== -1;
+    }
+
+    function updateVideo2Style() {
+        let backdrop = cover.querySelector(".video2-backdrop");
+
+        if (isVideo2()) {
+            cover.classList.add("video2-portrait");
+
+            if (!backdrop) {
+                backdrop = document.createElement("video");
+                backdrop.className = "video2-backdrop";
+                backdrop.muted = true;
+                backdrop.loop = true;
+                backdrop.autoplay = true;
+                backdrop.playsInline = true;
+                backdrop.setAttribute("aria-hidden", "true");
+                cover.insertBefore(backdrop, cover.firstChild);
+            }
+
+            const source = video.currentSrc || video.src;
+
+            if (source && backdrop.src !== source) {
+                backdrop.src = source;
+                backdrop.load();
+                backdrop.play().catch(() => {});
+            }
+        } else {
+            cover.classList.remove("video2-portrait");
+
+            if (backdrop) {
+                backdrop.pause();
+                backdrop.remove();
+            }
+        }
+    }
+
+    video.addEventListener("loadedmetadata", updateVideo2Style);
+    video.addEventListener("loadeddata", updateVideo2Style);
+    video.addEventListener("emptied", updateVideo2Style);
+    video.addEventListener("loadstart", updateVideo2Style);
+
+    updateVideo2Style();
+})();
+
+
 
 
 
